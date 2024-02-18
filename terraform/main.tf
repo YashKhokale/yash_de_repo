@@ -1,19 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-
-  required_version = ">= 1.2.0"
-}
-
-provider "aws" {
-  region  = var.aws_region
-  profile = "default"
-}
-
 # Create security group for access to EC2 from your Anywhere
 resource "aws_security_group" "sde_security_group" {
   name        = "sde_security_group"
